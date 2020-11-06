@@ -2,22 +2,18 @@ from Game_Server.EventListener import *
 import threading
 class GameLoop:
 
-    def __init__(self, is_running : bool):
-        self.is_running = is_running
+    def __init__(self):
         self.event_listener = EventListener()
+        self.current_command = None
         pass
 
-    def game_loop(self):
-        while self.is_running:
-            command = input("Type command: ")
-            command.lower()
-            thread = threading.Thread(target=self.debug, args=(command,))
-            thread.start()
-        pass
+    def game_loop(self, command : str):
+        command.lower()
+        thread = threading.Thread(target=self.debug, args=(command,))
+        thread.start()
 
     def debug(self, command : str):
         if command == "hello":
-            print("Hello back")
+            self.current_command = "hello back"
         if command == "poop":
-            print("lol")
-        pass
+            self.current_command = "lol"

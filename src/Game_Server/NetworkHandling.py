@@ -1,6 +1,8 @@
 import socket
 import threading
+from Game_Server.GameLoop import *
 
+game_loop = GameLoop()
 NUMBER_OF_BYTES_TO_ACCEPT = 64
 PORT = 80
 SERVER = socket.gethostbyname(socket.gethostname())
@@ -23,9 +25,8 @@ def client_handling(socket_object, address):
             message_length = int(message_length)
             message = socket_object.recv(message_length).decode(FORMAT)
             print(f"[{address}] {message}")
-
-            if message == DISCONNECT_SIGNAL:
-                connected = False
+            game_loop.game_loop(message)
+            socket_object.send(game_loop.current_command.encode(FORMAT))
     socket_object.close()
 
     pass
