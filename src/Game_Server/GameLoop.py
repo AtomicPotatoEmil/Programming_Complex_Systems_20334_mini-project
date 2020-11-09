@@ -15,5 +15,6 @@ class GameLoop:
     def debug(self, command : str):
         if command == "hello":
             self.current_command = "hello back"
+            print("hello back")
         if command == "poop":
             self.current_command = "lol"
