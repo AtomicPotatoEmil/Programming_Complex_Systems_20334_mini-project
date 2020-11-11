@@ -1,6 +1,7 @@
 class EventListener:
 
     def __init__(self):
+        self.current_feedback = None
         pass
 
     def listen_to_events(self, command):
