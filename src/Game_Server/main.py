@@ -8,3 +8,5 @@ kingdom_name = input("What is the name of your kingdom? [TYPE THE NAME OF YOUR K
 print(f"Your name is {player_name} and your kingdom is named {kingdom_name}")
 command = input("Type command: ")
 game_loop.game_loop(command)
+
+b = Building()
