@@ -1,6 +1,5 @@
 import threading
 from SingleLinkedList import *
-from Player import *
 from buildings.Lumberyard import *
 from buildings.Quarry import *
 from buildings.Mine import *
@@ -11,7 +10,6 @@ class Game:
 
     def __init__(self):
         self.at_the_start = True
-        self.player = Player()
         self.buildings = SingleLinkedList()
         self.tools = SingleLinkedList()
         self.options = ["info", "build lumberyard", "build quarry", "build mine", "build bank", "build town hall"]
