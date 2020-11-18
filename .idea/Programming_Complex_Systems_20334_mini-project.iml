@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/Game_Client" />
       <excludeFolder url="file://$MODULE_DIR$/Game_Server" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Python 3.7 (mini-project)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PyDocumentationSettings">
